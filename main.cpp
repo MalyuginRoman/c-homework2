@@ -85,13 +85,13 @@ int main (int, char **) {
     std::cout << "_______________" << std::endl;
 
     // количество различных элементов по первому числу
-    int first = 0, second = 0, third = 0, fourthd = 0;
+    int first = 0;
     std::string text, first_el, second_el, third_el, fourthd_el;
     std::vector<int> vs;
     
     for (int i = 0; i < count; i++) {
         text = ip_addresses.at(i).text1;
-        for (int j = 0; j < text.length(); j++) {
+        for (int j = 0; j < (int)text.length(); j++) {
             if (text[j] == '.') {
                 if(first == 0){
                     vs.push_back(std::stoi(first_el));
@@ -132,8 +132,8 @@ int main (int, char **) {
     
     for (int i = 0; i < count; i++) {
         text = ip_addresses.at(i).text1;
-        for (int j = 0; j <= text.length(); j++) {
-            if (text[j] == '.' || j == text.length()) {
+        for (int j = 0; j <= (int)text.length(); j++) {
+            if (text[j] == '.' || j == (int)text.length()) {
                 if(!isWrite1) {
                     vs1.push_back(std::stoi(first_el));
                     iter ++;
