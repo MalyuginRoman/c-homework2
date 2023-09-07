@@ -12,6 +12,7 @@ struct my_struct {
 };
 
 int main (int, char **) {
+    std::cout << "Version: " << version() << std::endl;
     std::cout << "For write ip address press 'w', for download ip address press 'd', for exit press any other letter:" << std::endl;
 
     int count = 0;
